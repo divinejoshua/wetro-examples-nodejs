@@ -10,7 +10,6 @@ const wetrocloud = new Wetrocloud({ apiSecret: API_SECRET });
 
 // Wrap everything in an async function
 const run = async () => {
-  try {
     // Set the collection ID
     const collection_id = "unique_id_123456789";
 
@@ -30,9 +29,6 @@ const run = async () => {
     const response : any= await wetrocloud.queryCollection({
       collection_id: collection_id,
       request_query: "What is the main topic of the article?",
-      // Optional parameters:
-      // json_schema: { topic: "", description: "" },
-      // model: "gpt-4",
     });
 
     console.log("Streaming response:");
@@ -40,10 +36,6 @@ const run = async () => {
       console.log(chunk);
     }
 
-    // console.log("Query response:", response);
-  } catch (error) {
-    console.error("Error:", error);
-  }
 };
 
 // Run the async function
