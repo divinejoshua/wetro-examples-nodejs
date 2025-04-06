@@ -11,7 +11,7 @@ const wetrocloud = new Wetrocloud({ apiSecret: API_SECRET });
 // Wrap everything in an async function
 const run = async () => {
     // Set the collection ID
-    const collection_id = "unique_id_123456789";
+    const collection_id = "unique_id_12345678910";
 
     // Create a new collection
     await wetrocloud.createCollection({ collection_id });
@@ -29,6 +29,7 @@ const run = async () => {
     const response : any= await wetrocloud.queryCollection({
       collection_id: collection_id,
       request_query: "What is the main topic of the article?",
+      model: "meta-llama/llama-4-scout-17b-16e-instruct",
     });
 
     console.log("Streaming response:");
