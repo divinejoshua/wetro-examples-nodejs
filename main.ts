@@ -34,7 +34,7 @@ const run = async () => {
 
     console.log("Streaming response:");
     for await (const chunk of response) {
-      console.log(chunk);
+      console.log(chunk.response);
     }
 
 };
