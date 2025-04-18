@@ -6,7 +6,7 @@ dotenv.config();
 const API_SECRET = process.env.WETROCLOUD_API_SECRET || "";
 
 // Initialize Wetrocloud with your API secret
-const wetrocloud = new Wetrocloud({ apiSecret: API_SECRET });
+const wetrocloud = new Wetrocloud({ apiKey: API_SECRET });
 
 // Wrap everything in an async function
 const run = async () => {
