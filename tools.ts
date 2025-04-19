@@ -12,7 +12,7 @@ const client = new Wetrocloud({
 const extract = async () => {
     // Extract structured data from a website
     const response = await client.extract({
-        website_url: "https://en.wikipedia.org/wiki/Bloomberg_Billionaires_Index",
+        website: "https://en.wikipedia.org/wiki/Bloomberg_Billionaires_Index",
         json_schema: [{ name: "name of rich man", networth: "amount worth" }]
     });
 
