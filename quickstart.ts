@@ -10,9 +10,9 @@ const wetrocloud = new Wetrocloud({ apiKey: API_SECRET });
 
 // Wrap everything in an async function
 const main = async () => {
-    const response : any = await wetrocloud.textGeneration({
-        model: "gpt-4.1-nano",
-        messages: [{ "role": "user", "content": "Tell me a joke." }],
+    const response : any = await wetrocloud.queryCollection({
+        collection_id :"my_unique_collection_id",
+        request_query :"What is this about?",
         stream: true,
       });
 
