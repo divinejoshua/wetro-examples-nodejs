@@ -12,11 +12,11 @@ const client = new Wetrocloud({
 const extract = async () => {
     // Extract structured data from a website
     const response = await client.extract({
-        website: "https://en.wikipedia.org/wiki/Bloomberg_Billionaires_Index",
-        json_schema: [{ name: "name of rich man", networth: "amount worth" }]
+        website: "https://yeungmancooking.com/collections/ymc-merch",
+        json_schema: [{ name: "Name of Item", price: "Price of Item", image: "Image of Item" }]
     });
 
-    console.log("Data extraction:", response);
+    console.log("Data extraction:", JSON.stringify(response));
 
 }
 
